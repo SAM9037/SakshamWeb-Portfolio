@@ -1,0 +1,157 @@
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.home-container {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.home-container .left {
+    width: 70vw;
+    position: relative;
+    left: 5vw;
+    /* top: -20vh; */
+}
+
+.home-container .left h1 {
+    font-family: "Roboto", sans-serif;
+}
+
+.home-container .left p {
+    padding: 30px 0;
+    font-size: x-large;
+    font-family: "Source Code Pro", monospace;
+    min-height: 250px;
+}
+
+img.main-pic {
+    width: 30vw;
+    height: auto;
+    transform: scale(1.5);
+    margin: 16vh 0;
+    filter: opacity(0.9);
+}
+
+.download-link {
+    z-index: 12;
+}
+
+.download-button {
+    background-color: var(--complementary-color);
+    color: var(--text-color);
+    width: fit-content;
+    height: fit-content;
+    z-index: 12;
+
+    &&:hover {
+        transition: all 0.35s ease-in-out;
+        font-weight: bold;
+        color: var(--complementary-color);
+        background-color: var(--text-color);
+    }
+}
+
+.main-pic {
+    width: 1000px;
+    height: 1000px;
+}
+
+.home-container .right {
+    position: relative;
+    top: 0vh;
+    left: 12vw;
+    width: 1000px;
+    height: 1000px;
+}
+
+.main-pic {
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-container .right {
+        top: -5vh;
+        left: 0vw;
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-container .right {
+        top: -5vh;
+        left: 0vw;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+/* .content {
+    padding-right: 3px;
+    font-size: 24px;
+    border-right: 2px solid black;
+    display: inline-block;
+}
+
+@keyframes blink {
+
+    0%,
+    25%,
+    75%,
+    100% {
+        border-color: transparent;
+    }
+
+    26%,
+    50%,
+    74% {
+        border-color: black;
+    }
+}
+
+.content {
+    animation: blink 0.7s infinite;
+} */
+
+
+@media (max-width: 768px) {
+    .home-container {
+        height: 40vh;
+    }
+
+    .home-container .left {
+        position: relative;
+        top: 5vh;
+    }
+
+    .home-container .left p {
+        font-size: 0.85rem;
+        padding: 5px 0;
+        width: 60vw;
+        z-index: 10;
+    }
+
+    .heading {
+        width: 60vw;
+        font-size: 1.25rem;
+    }
+
+    .main-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .download-button {
+        margin: 1.25rem 0;
+        position: relative;
+        top: -12vh;
+        left: -5vw;
+        transform: scale(0.7);
+    }
+}

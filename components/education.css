@@ -1,0 +1,142 @@
+.education-container {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    width: 98.75vw;
+    overflow: hidden;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    padding: 50px; /* Ensure consistent padding */
+    color: #d3d3d3; /* Text color */
+    background: radial-gradient(ellipse at bottom, #1b2735, #090a0f);
+}
+
+.education-container {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.education-heading {
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    margin: 8vh 0; /* Adjust margin for vertical spacing */
+}
+
+.education-sub-container {
+    width: 70%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-left: 10px solid #333333;
+}
+
+.education-line {
+    background-color: #333333;
+    /* border: 2px solid wheat; */
+}
+
+.education-line {
+    position: relative;
+    top: 8vh;
+}
+
+.education-card-box {
+    /* display: flex; */
+    margin-bottom: 30px;
+    width: 100%;
+    position: relative;
+    perspective: 1500px; /* For 3D effect */
+}
+
+.education-card {
+    height: 15vh;
+    background: linear-gradient(135deg, #333333, #191970);
+    padding: 10px 20px;
+    border-radius: 15px;
+    /* border: 1px solid #fff; */
+    margin: 1.5rem 2rem;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); */
+    transition: transform 0.5s ease-in, box-shadow 0.5s ease-in; /* Smooth transition for hover effect */
+    transform-style: preserve-3d; /* For 3D flipping */
+    position: relative;
+}
+
+.education-card:hover {
+    transform: rotate3d(1, 0, 0, 180deg); /* Flip effect on hover */
+}
+
+.education-card-front-side, .education-card-back-side {
+    position: absolute; /* Stack front and back sides on top of each other */
+    width: 100%; /* Ensure both sides take the full width */
+    height: 15vh; /* Ensure both sides take the full height */
+    backface-visibility: hidden; /* Hide back face when showing front */
+}
+
+.education-card-back-side {
+    transform: rotate3d(1, 0, 0, 180deg); /* Rotate the back side to hide it initially */
+    width: 95%; /* Ensure both sides take the full width */
+    /* background: linear-gradient(135deg, #CCCCFF, #333333); */
+    color: #0000FF;
+    background-color: #CCCCFF;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 10px rgba(100, 100, 255, .4);
+    top: 4.5vh;
+}
+
+.education-card-heading,
+.education-card-field,
+.education-card-content {
+    position: relative;
+    z-index: 1; /* Ensure visibility */
+}
+
+.education-card-heading {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.education-card-field,
+.education-card-content {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.education-card-back-side .education-card-content, .education-card-back-side .education-card-heading {
+    padding-left: 15px;
+}
+
+.education-card-field {
+    font-style: italic; /* Italic style for emphasis */
+    color: #c0c0c0; /* Lighter color for fields */
+}
+
+@media (max-width: 768px) {
+    .education-sub-container {
+        width: 100%; /* Adjust width for smaller screens */
+    }
+
+    .education-card {
+        width: 100%;
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    .education-heading {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .education-card-heading {
+        font-size: 1rem;
+    }
+
+    .education-card-field, .education-card-content {
+        font-size: 0.65rem;
+        margin: 1vh 0;
+    }
+}

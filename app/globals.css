@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --primary-color: #000000;
+  --secondary-color: #333333;
+  --accent-color: #708090;
+  --complementary-color: #191970;
+  --highlight-color: #2C3539;
+  --nav-color: #252525a6;
+  --text-color: #D3D3D3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* width: 200%; */
+}
+
+/* Hide horizontal scrollbar on the entire page */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
