@@ -1,0 +1,2 @@
+-This project is made using HTML, CSS, JavaScript.
+-Technologies Used are React, Tailwind CSS and Express Js.
